@@ -14,7 +14,7 @@
 
   <h2>GitHub Repository</h2>
     <p>The code for this project is hosted on GitHub. You can clone the repository using the following command:</p>
-    <pre><code>gh repo clone AIBabyTeaching/deep-learning-project-Geo-y20</code></pre>
+    <pre><code>gh repo clone Geo-y20/Standard-OCR- </code></pre>
 
   <h2>Solution Framework</h2>
     <ul>
