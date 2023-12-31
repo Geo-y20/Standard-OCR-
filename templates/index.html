@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Character Recognition</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      text-align: left;
+      /* Align text to the left */
+    }
+
+    nav {
+      background-color: #007BFF;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .container {
+      text-align: left;
+      /* Align container text to the left */
+    }
+
+    .section {
+      margin: 20px;
+    }
+
+    nav {
+      background-color: #007BFF;
+      padding: 10px;
+      text-align: left;
+      /* Align nav text to the left */
+    }
+
+    .paragraph {
+      line-height: 1.6;
+    }
+
+    .recommend {
+      padding: 20px;
+    }
+
+    .one,
+    .two,
+    .three {
+      color: #007BFF;
+    }
+
+    .footer {
+      margin-top: 50px;
+      padding: 20px;
+      background-color: #007BFF;
+      text-align: center;
+      color: #fff;
+    }
+
+    hr {
+      color: #007BFF;
+      width: 220px;
+      margin-right: 1100px;
+    }
+
+    /* Button Styles */
+    .upload-label,
+    .predict-button,
+    .project-link,
+    .nav-link {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .upload-label,
+    .predict-button {
+      background-color: #007BFF;
+      color: #fff;
+    }
+
+    .upload-label:hover,
+    .predict-button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Navbar Link Hover */
+    .nav-link:hover {
+      color: #0056b3;
+    }
+
+    /* Custom Button Color */
+    .predict-button {
+      background-color: blue;
+    }
+
+    /* File Input Styles */
+    .file-input {
+      display: none;
+    }
+
+    .file-upload label {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: blue;
+      color: #fff;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .file-upload label:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="#">Character Recognition</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="/">Home</a>
+            <a class="nav-link" href="/about">About Project</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <main class="container py-5">
+    <section id="home" class="content">
+      <h1>Welcome to Character Recognition</h1>
+      <p>Start recognizing characters with our advanced OCR system.</p>
+      <p class="lead">This is a project dedicated to recognizing characters using advanced OCR technology. You can
+        upload an image and our system will try to recognize the characters in it.</p>
+      <a href="https://github.com/AIBabyTeaching/deep-learning-project-Geo-y20" target="_blank"
+        class="btn btn-primary">Project Repository</a>
+    </section>
+    <section id="file-upload" class="content mt-5">
+      <h2>Choose a file</h2>
+      <div class="file-upload">
+        <label for="imageUpload" class="btn btn-primary">Choose File</label>
+        <!-- <input type="file" id="imageUpload" accept="image/*"> -->
+        <img id="imagePreview" src="" alt="Image Preview" style="display: none;">
+
+        <input type="file" id="imageUpload" class="file-input" onchange="handleFileChange(event)">
+        <img id="uploadedImagePreview" src="" alt="Uploaded Image Preview" style="display: none;">
+      </div>
+      <div id="uploadedPreview" class="mt-3"></div> <!-- Updated ID -->
+    </section>
+    <section id="prediction" class="content mt-5">
+      <h2>Prediction</h2>
+      <p id="predictionOutput" class="prediction-text">Prediction output will appear here</p>
+      <div id="predictionImagePreview"></div>
+      <button class="btn btn-primary" onclick="predictCharacter()">Predict</button>
+    </section>
+    <script src="/script.js"></script>
+  </main>
+  <footer class="footer bg-primary text-white text-center py-3">
+    <p>Thank you for choosing our project for testing!</p>
+    <p>Follow us on social media:</p>
+    <a href="https://twitter.com/GeorgeYouhana2" target="_blank" class="text-white mr-3"><i
+        class="fab fa-twitter"></i></a>
+    <a href="https://www.linkedin.com/in/george-youhana-a5b756155/ " target="_blank" class="text-white"><i
+        class="fab fa-linkedin-in"></i></a>
+  </footer>
+
+</html>

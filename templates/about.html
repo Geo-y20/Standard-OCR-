@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='new.css') }}">
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</head>
+<style>
+  /* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+nav {
+  background-color: #007BFF;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.section {
+  margin: 20px;
+}
+
+.paragraph {
+  line-height: 1.6;
+}
+
+.recommend {
+  padding: 20px;
+}
+
+.one,
+.two,
+.three {
+  color: #007BFF;
+}
+
+.footer {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #007BFF;
+  text-align: center;
+  color: #fff;
+}
+
+hr {
+  color: #007BFF;
+  width: 220px;
+  margin-right: 1100px;
+}
+
+/* Button Styles */
+.upload-label,
+.predict-button,
+.project-link,
+.nav-link {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.upload-label,
+.predict-button {
+  background-color: #007BFF;
+  color: #fff;
+}
+
+.upload-label:hover,
+.predict-button:hover {
+  background-color: #0056b3;
+}
+
+/* Navbar Link Hover */
+.nav-link:hover {
+  color: #0056b3;
+}
+
+</style>
+<body>
+  <nav>
+    <a href="/">Home</a>
+  </nav>
+
+  <section id="problem-statement" class="section">
+    <h2 class="heading">Problem Statement</h2>
+    <p class="paragraph">The task is a computer vision challenge to detect characters in input images, emphasizing image
+      processing, analysis, and modern deep learning techniques. It's more aligned with computer vision than Optical
+      Character Recognition (OCR), utilizing various models like ResNet, Xception, Inception, and MobileNet to process
+      and analyze the dataset for accurate predictions.</p>
+  </section>
+
+  <section id="about" class="section">
+    <h1 class="one">About the Project
+      <hr>
+    </h1>
+    <p class="paragraph">This project is a character recognition system developed using deep learning techniques. It can
+      predict characters from images uploaded by the user.</p>
+  </section>
+
+  <section id="project-repository" class="section">
+    <h2 class="two">Project Repository
+      <hr>
+    </h2>
+    <p class="paragraph">Nowadays, companies using paper-based systems are striving to improve their system’s
+      performance by digitalizing their information. A digital system provides a secure and easy way of sharing and
+      retrieving information, which is one of the main issues in a paper-based system. This problem becomes a burden as
+      paper stacks up, since productivity is tied to the amount of time wasted searching for a relevant piece of
+      information. Meaning as paper stacks up, productivity goes down.</p>
+    <a href="home.html" target="_blank" class="project-link">Welcome to Character Recognition</a>
+    <p class="paragraph">Fortunately, Optical Character Recognition, OCR in short, is the key for solving this problem.
+      OCR is a way of converting text written on a paper or an unsearchable PDF to a searchable, editable format. Thus,
+      companies utilizing this technology can digitalize their systems in an incredibly short time, relatively speaking
+      when compared to retyping everything from scratch.</p>
+  </section>
+
+  <section id="recommendation" class="section recommend">
+    <h2 class="three">Recommendation
+      <hr>
+    </h2>
+    <p class="paragraph">If you are interested in character recognition and deep learning, we recommend checking out the
+      following resources:</p>
+    <ul class="list" style="color: #007BFF;">
+      <li>TensorFlow - An open-source deep learning framework</li>
+      <li>PyTorch - A deep learning framework for fast, flexible experimentation</li>
+      <li>Keras - A high-level neural networks API</li>
+    </ul>
+  </section>
+
+  <section id="features" class="section">
+    <h2 class="heading">Features and Recommendations</h2>
+    <ul class="list one">
+      <li>High accuracy character recognition</li>
+      <li>Support for multiple languages</li>
+      <li>Easy integration with existing systems</li>
+      <li>Improve accuracy by training the OCR model with more diverse datasets.</li>
+      <li>Enhance user experience by adding real-time character recognition.</li>
+      <li>Implement a feedback system to gather user suggestions and improve the OCR system.</li>
+      <li>Optimize the OCR system for mobile devices to provide a seamless user experience on smartphones and tablets.
+      </li>
+    </ul>
+  </section>
+
+  <footer class="footer">
+    <p>© 2023 Character Recognition. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
